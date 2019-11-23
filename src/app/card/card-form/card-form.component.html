@@ -1,0 +1,36 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add Card</h4>
+   
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+   </div>
+   
+   <div class="modal-body">
+    <form [formGroup]="cardForm" (ngSubmit)="saveCard()">
+      <div class="form-group">
+        <label for="title">Name*</label>
+        <input type="text" id="name" placeholder="Name" class="form-control" formControlName="name" />
+        <span style="color:Red;" *ngIf="cardForm.controls['name'].touched && cardForm.controls['name'].errors?.required">Name
+          is required.</span>
+      </div>
+      <div class="form-group">
+        <label for="description">Description*</label>
+        <textarea  id="description" placeholder="Description" class="form-control" formControlName="description"></textarea>
+        <span style="color:rgb(238, 235, 235);" *ngIf="cardForm.controls['description'].touched && cardForm.controls['description'].errors?.required">Description
+          is required.</span>
+      </div>
+   
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="done" formControlName="done">
+        <label class="form-check-label" for="done">
+          Done
+        </label>
+      </div>
+    </form>
+   </div>
+   
+   <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+    <button class="btn btn-primary" (click)="saveCard()" [disabled]="cardForm.invalid">Save</button>
+   </div>

@@ -6,17 +6,28 @@ import { AngularFirestoreModule } from '@angular/fire/firestore'; // For Cloud F
 import { environment } from 'src/environments/environment'; // Config
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CardListComponent } from './card/card-list/card-list.component';
+import { CardFormComponent } from './card/card-form/card-form.component';
+import { NgbModalBackdrop } from '@ng-bootstrap/ng-bootstrap/modal/modal-backdrop';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardListComponent,
+    CardFormComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase), // Import firebase
     AngularFirestoreModule, // Import firestore
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FormsModule,
+        ReactiveFormsModule
   ],
+  entryComponents: [CardFormComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
