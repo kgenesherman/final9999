@@ -10,6 +10,7 @@ This version was built with help from  https://gavilan.blog/2019/06/02/my-first-
 
 First commit.
 
+Added firebase cloudstore.
 
 
 
