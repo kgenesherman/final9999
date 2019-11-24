@@ -11,12 +11,16 @@ import { CardFormComponent } from './card/card-form/card-form.component';
 import { NgbModalBackdrop } from '@ng-bootstrap/ng-bootstrap/modal/modal-backdrop';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MenuComponent } from './menu/menu.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardListComponent,
-    CardFormComponent
+    CardFormComponent,
+    MenuComponent,
+    UserprofileComponent
   ],
   imports: [
     BrowserModule,
