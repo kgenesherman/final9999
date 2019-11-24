@@ -9,7 +9,7 @@
    <div class="modal-body">
     <form [formGroup]="cardForm" (ngSubmit)="saveCard()">
       <div class="form-group">
-        <label for="title">Name*</label>
+        <label for="name">Name</label>
         <input type="text" id="name" placeholder="Name" class="form-control" formControlName="name" />
         <span style="color:Red;" *ngIf="cardForm.controls['name'].touched && cardForm.controls['name'].errors?.required">Name
           is required.</span>
@@ -20,7 +20,31 @@
         <span style="color:rgb(238, 235, 235);" *ngIf="cardForm.controls['description'].touched && cardForm.controls['description'].errors?.required">Description
           is required.</span>
       </div>
-   
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" placeholder="Phone" class="form-control" formControlName="phone" />
+        <span style="color:Red;" *ngIf="cardForm.controls['phone'].touched && cardForm.controls['phone'].errors?.required">Name
+          is required.</span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" id="Email" placeholder="Email" class="form-control" formControlName="email" />
+        <span style="color:Red;" *ngIf="cardForm.controls['email'].touched && cardForm.controls['email'].errors?.required">Name
+          is required.</span>
+      </div>
+      <div class="form-group">
+        <label for="url">URL</label>
+        <input type="text" id="url" placeholder="URL" class="form-control" formControlName="url" />
+        <span style="color:Red;" *ngIf="cardForm.controls['url'].touched && cardForm.controls['url'].errors?.required">Name
+          is required.</span>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Address" class="form-control" formControlName="address" />
+        <span style="color:Red;" *ngIf="cardForm.controls['address'].touched && cardForm.controls['address'].errors?.required">Name
+          is required.</span>
+      </div>
+
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="done" formControlName="done">
         <label class="form-check-label" for="done">
