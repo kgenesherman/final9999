@@ -60,7 +60,7 @@ handleEditClick(card: CardViewModel) {
   modal.componentInstance.createMode = false;
   modal.componentInstance.card = card;
 }
-//test
+
 
 handleModalTodoFormClose(response) {
   // is response an object?

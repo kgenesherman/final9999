@@ -10,9 +10,13 @@ import { CardListComponent } from './card/card-list/card-list.component';
 import { CardFormComponent } from './card/card-form/card-form.component';
 import { NgbModalBackdrop } from '@ng-bootstrap/ng-bootstrap/modal/modal-backdrop';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './menu/menu.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AuthService } from './auth.service';
+//import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,16 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase), // Import firebase
-    AngularFirestoreModule, // Import firestore
+    AngularFirestoreModule, 
+    AngularFireAuthModule,
     AppRoutingModule,
     NgbModule,
+    NgbModalModule,
     FormsModule,
         ReactiveFormsModule
   ],
   entryComponents: [CardFormComponent],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
