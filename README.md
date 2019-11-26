@@ -10,7 +10,7 @@ This version was built with help from  https://gavilan.blog/2019/06/02/my-first-
 
 The above webpage does not work out of the box.  Had o replace login component with login service.
 
-The final app works for authentication.  There is a routing problem.  Works with manual entry of loc:4200/carf-list.
+The final app works for authentication.  There is a routing problem.  Works with manual entry of loc:4200/card-list.
 I will commit this and try to fix the routing today.
 
 First commit.
@@ -22,6 +22,11 @@ Added components and sertvices.
 Added Routing.
 
 Added Authentication and login.
+
+core.js:6014 ERROR Error: Uncaught (in promise): Error: No component factory found for AuthService. Did you add it to @NgModule.entryComponents?
+Error: No component factory found for AuthService. Did you add it to @NgModule.entryComponents?
+
+hoever, AuthShervice is a provider, not allowed in entryComponents.
 
 
 
